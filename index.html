@@ -1310,7 +1310,7 @@ a {
     </section>
 
     <!-- Shop Section -->
-    <section id="shop" class="section shop">
+    <section id="shop" class="section shop visible">
         <div class="container">
             <h2 class="section-title">Premium Products</h2>
             
@@ -1935,6 +1935,19 @@ function addToCart(productId) {
     
     // Show feedback
     showNotification('Item added to cart!');
+}
+        function initIntersectionObserver() {
+  const sections = document.querySelectorAll('.section');
+  if (!('IntersectionObserver' in window)) {
+    sections.forEach(s => s.classList.add('visible'));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  sections.forEach(s => observer.observe(s));
 }
 
 function removeFromCart(productId) {
