@@ -1,0 +1,2375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asfa Rizwan Beauty & Wellness - Where Glam meets Performance</title>
+    <meta name="description" content="Professional makeup masterclasses and premium beauty products by Asfa Rizwan. Based in Pakistan, serving Nowshera, Lahore, and Punjab.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Asfa Rizwan Beauty & Wellness">
+    <meta property="og:description" content="Where Glam meets Performance - Professional makeup classes and premium beauty products">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://asfarizwan.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&h=630&fit=crop">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Asfa Rizwan Beauty & Wellness",
+        "url": "https://asfarizwan.com",
+        "sameAs": [
+            "https://facebook.com/asfarizwanofficial",
+            "https://instagram.com/asfarizwanofficial",
+            "https://youtube.com/@asfarizwanofficial",
+            "https://tiktok.com/@asfarizwanofficial"
+        ],
+        "address": [
+            {
+                "@type": "PostalAddress",
+                "addressLocality": "Nowshera",
+                "addressRegion": "Khyber Pakhtunkhwa",
+                "addressCountry": "Pakistan"
+            },
+            {
+                "@type": "PostalAddress",
+                "addressLocality": "Lahore",
+                "addressRegion": "Punjab", 
+                "addressCountry": "Pakistan"
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Variables */
+:root {
+    --primary: #d4af37;
+    --primary-dark: #b8941f;
+    --secondary: #8b4513;
+    --accent: #ff69b4;
+    --dark: #1a1a1a;
+    --gray: #666;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0,0,0,0.1);
+    --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+    --transition: all 0.3s ease;
+    --gradient: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: var(--gradient);
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--dark);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.section {
+    padding: 4rem 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    padding: 0.5rem;
+}
+
+.mobile-menu-btn span {
+    width: 20px;
+    height: 2px;
+    background: var(--dark);
+    transition: var(--transition);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* background: linear-gradient(135deg, rgba(212, 175, 55, 0.8), rgba(255, 105, 180, 0.8)); */
+    background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&h=800&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: var(--white);
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2;
+}
+
+.video-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.video-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Offer Banner */
+.offer-banner {
+    background: var(--gradient);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.offer-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.offer-close {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.offer-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Shop Section */
+.shop {
+    background: var(--light-gray);
+}
+
+.shop-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary);
+    border-radius: 25px;
+    background: var(--white);
+    color: var(--dark);
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background: var(--light-gray);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--gradient);
+    color: var(--white);
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.product-blurb {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.product-rating {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.star {
+    color: #ffd700;
+    font-size: 1rem;
+}
+
+/* Cart */
+.cart-btn {
+    position: fixed;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    background: var(--gradient);
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    z-index: 999;
+    transition: var(--transition);
+}
+
+.cart-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+}
+
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background: var(--white);
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+    z-index: 1001;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.cart-close {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.cart-close:hover {
+    background: var(--gray);
+    color: var(--white);
+}
+
+.cart-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    background: var(--light-gray);
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.cart-item-price {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.quantity-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.qty-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.qty-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.cart-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.cart-total {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 2rem;
+    color: var(--gray);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #25d366;
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    z-index: 999;
+    transition: var(--transition);
+    animation: bounce 2s infinite;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Classes */
+.classes-teaser {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.class-card {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.class-card:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.class-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    color: var(--white);
+}
+
+.class-ribbon {
+    position: absolute;
+    top: 1rem;
+    right: -30px;
+    background: var(--accent);
+    color: var(--white);
+    padding: 0.5rem 2rem;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.class-location {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.class-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.class-status {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.lightbox-close:hover {
+    background: var(--gray);
+    color: var(--white);
+}
+
+/* Testimonial */
+.testimonial {
+    background: var(--gradient);
+    color: var(--white);
+    text-align: center;
+}
+
+.testimonial-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* About */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    height: 400px;
+    background: var(--light-gray);
+    border-radius: 20px;
+    background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop');
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow);
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Locations */
+.locations {
+    background: var(--light-gray);
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.location-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.location-map {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.location-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.location-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.location-address {
+    color: var(--gray);
+}
+
+/* Contact */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.form-error.visible {
+    display: block;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+/* Footer */
+.footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ccc;
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    color: var(--primary);
+}
+
+.newsletter {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #333;
+    color: var(--white);
+}
+
+.newsletter button {
+    background: var(--gradient);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    color: #999;
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    background: var(--gradient);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 998;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    
+    .cart-drawer {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .classes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .whatsapp-btn,
+    .cart-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 2rem 0;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .shop-filters {
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Button Ripple Effect */
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Loading States */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo" style="display: none;" id="mobile-logo">Zeenat Firdous</div>
+            <div class="logo" id="desktop-logo">Zeenat Firdous</div>
+            <script>
+                function updateLogoDisplay() {
+                    const mobileLogo = document.getElementById('mobile-logo');
+                    const desktopLogo = document.getElementById('desktop-logo');
+                    if (window.innerWidth <= 768) {
+                        mobileLogo.style.display = 'none';
+                        desktopLogo.style.display = 'none';
+                    } else {
+                        mobileLogo.style.display = 'none';
+                        desktopLogo.style.display = 'block';
+                    }
+                }
+                window.addEventListener('resize', updateLogoDisplay);
+                document.addEventListener('DOMContentLoaded', updateLogoDisplay);
+            </script>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#shop" class="nav-link">Shop</a></li>
+                <li><a href="#classes" class="nav-link">Classes</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <!-- <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button> -->
+        </nav>
+    </header>
+
+    <!-- Offer Banner -->
+    <div class="offer-banner" id="offer-banner">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                <img src="https://via.placeholder.com/48x48?text=💄" alt="Logo Icon" style="width:48px;height:48px;">
+                <span style="font-size: 1.5rem; font-weight: 700; color: #fff; letter-spacing: 1px;">Zeenat Firdous Makeup Lounge</span>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://assets.mixkit.com/videos/preview/mixkit-woman-applying-makeup-in-close-up-40862-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1 class="hero-title">Asfa Rizwan Beauty & Wellness</h1>
+            <p class="hero-subtitle">Where Glam meets Performance</p>
+            <div class="hero-ctas">
+                <a href="#shop" class="btn btn-primary">Shop Now</a>
+                <a href="#classes" class="btn btn-secondary">Join a Class</a>
+            </div>
+        </div>
+        <div class="video-controls">
+            <button class="video-toggle" onclick="toggleVideo()" aria-label="Toggle video sound">
+                🔇
+            </button>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="section shop">
+        <div class="container">
+            <h2 class="section-title">Premium Products</h2>
+            
+            <div class="shop-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="cosmetics">Cosmetics</button>
+                <button class="filter-btn" data-filter="makeup">Makeup</button>
+                <button class="filter-btn" data-filter="base">Base</button>
+                <button class="filter-btn" data-filter="brushes">Brushes</button>
+                <button class="filter-btn" data-filter="haircolor">Hair Color</button>
+                <button class="filter-btn" data-filter="serums">Serums</button>
+                <button class="filter-btn" data-filter="supplements">Creatine & Supplements</button>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="section classes">
+        <div class="container">
+            <h2 class="section-title">Masterclasses by Asfa Rizwan</h2>
+            
+            <video class="classes-teaser" autoplay muted loop playsinline>
+                <source src="https://assets.mixkit.com/videos/preview/mixkit-makeup-artist-working-on-a-model-40863-large.mp4" type="video/mp4">
+            </video>
+
+            <div class="classes-grid">
+                <div class="class-card" onclick="openLightbox('Nowshera — Bridal Base Mastery')">
+                    <div class="class-overlay">
+                        <div class="class-ribbon">Fully Booked</div>
+                        <div>
+                            <div class="class-location">Nowshera</div>
+                            <div class="class-title">Bridal Base Mastery</div>
+                        </div>
+                        <div class="class-status">Professional Level</div>
+                    </div>
+                </div>
+
+                <div class="class-card" onclick="openLightbox('Nowshera — Eye Art Intensive')">
+                    <div class="class-overlay">
+                        <div class="class-ribbon">95% 5★ Reviews</div>
+                        <div>
+                            <div class="class-location">Nowshera</div>
+                            <div class="class-title">Eye Art Intensive</div>
+                        </div>
+                        <div class="class-status">Intermediate Level</div>
+                    </div>
+                </div>
+
+                <div class="class-card" onclick="openLightbox('Nowshera — Pro Brush Control')">
+                    <div class="class-overlay">
+                        <div class="class-ribbon">Sold Out</div>
+                        <div>
+                            <div class="class-location">Nowshera</div>
+                            <div class="class-title">Pro Brush Control</div>
+                        </div>
+                        <div class="class-status">Beginner Friendly</div>
+                    </div>
+                </div>
+
+                <div class="class-card" onclick="openLightbox('Lahore — Color Theory Lab')">
+                    <div class="class-overlay">
+                        <div class="class-ribbon">80+ Trainees</div>
+                        <div>
+                            <div class="class-location">Lahore</div>
+                            <div class="class-title">Color Theory Lab</div>
+                        </div>
+                        <div class="class-status">Advanced Level</div>
+                    </div>
+                </div>
+
+                <div class="class-card" onclick="openLightbox('Lahore — Serum Science')">
+                    <div class="class-overlay">
+                        <div class="class-ribbon">Advanced</div>
+                        <div>
+                            <div class="class-location">Lahore</div>
+                            <div class="class-title">Serum Science</div>
+                        </div>
+                        <div class="class-status">Skincare Focus</div>
+                    </div>
+                </div>
+
+                <div class="class-card" onclick="openLightbox('Punjab (Multan) — HD Makeup Look')">
+                    <div class="class-overlay">
+                        <div class="class-ribbon">Packed</div>
+                        <div>
+                            <div class="class-location">Punjab (Multan)</div>
+                            <div class="class-title">HD Makeup Look</div>
+                        </div>
+                        <div class="class-status">Photo Ready</div>
+                    </div>
+                </div>
+
+                <div class="class-card" onclick="openLightbox('Punjab (Faisalabad) — Hair Color Clinic')">
+                    <div class="class-overlay">
+                        <div class="class-ribbon">Hit</div>
+                        <div>
+                            <div class="class-location">Punjab (Faisalabad)</div>
+                            <div class="class-title">Hair Color Clinic</div>
+                        </div>
+                        <div class="class-status">Color Specialist</div>
+                    </div>
+                </div>
+
+                <div class="class-card" onclick="openLightbox('Punjab (Gujranwala) — Bridal Finishing')">
+                    <div class="class-overlay">
+                        <div class="class-ribbon">Success</div>
+                        <div>
+                            <div class="class-location">Punjab (Gujranwala)</div>
+                            <div class="class-title">Bridal Finishing</div>
+                        </div>
+                        <div class="class-status">Complete Package</div>
+                    </div>
+                </div>
+
+                <div class="class-card" onclick="openLightbox('Islamabad — Editorial Looks')">
+                    <div class="class-overlay">
+                        <div class="class-ribbon">Trending</div>
+                        <div>
+                            <div class="class-location">Islamabad</div>
+                            <div class="class-title">Editorial Looks</div>
+                        </div>
+                        <div class="class-status">Fashion Focus</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="section testimonial">
+        <div class="container">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">
+                    "Sach kahun to Asfa baji ki classes ne confidence double kar diya. Products aur tips dono ne kaam dikhaya—Nowshera se Lahore tak har jaga result solid!"
+                </p>
+                <p class="testimonial-author">— Hira S., Nowshera</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Asfa Rizwan</h2>
+            <div class="about-content">
+                <div class="about-image"></div>
+                <div>
+                    <p class="about-text">
+                        Asfa Rizwan is a Pakistan-based cosmetics instructor and entrepreneur. She runs hands-on masterclasses across Nowshera, Lahore, and Punjab, and curates products from pro-grade makeup to performance supplements like creatine. Her mission: studio-level beauty and wellness for everyone.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/asfarizwanofficial" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="https://instagram.com/asfarizwanofficial" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="https://youtube.com/@asfarizwanofficial" class="social-link" aria-label="YouTube">📹</a>
+                        <a href="https://tiktok.com/@asfarizwanofficial" class="social-link" aria-label="TikTok">🎵</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="section locations">
+        <div class="container">
+            <h2 class="section-title">Visit Us — Nowshera & Lahore, Pakistan</h2>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <iframe 
+                        class="location-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52845.56147944263!2d71.95943!3d34.01534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d917b90f068783%3A0xa816b2637558a412!2sNowshera%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e0!3m2!1sen!2s!4v1234567890"
+                        loading="lazy"
+                        title="Nowshera Location"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="location-info">
+                        <h3 class="location-name">Nowshera Studio</h3>
+                        <p class="location-address">Nowshera, Khyber Pakhtunkhwa, Pakistan</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <iframe 
+                        class="location-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d435519.2274423963!2d74.00472!3d31.48274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e58107d9%3A0xc23abe6ccc7e2462!2sLahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1234567891"
+                        loading="lazy"
+                        title="Lahore Location"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="location-info">
+                        <h3 class="location-name">Lahore Studio</h3>
+                        <p class="location-address">Lahore, Punjab, Pakistan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                    <div class="form-error" id="name-error">Please enter your name</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                    <div class="form-error" id="phone-error">Please enter your phone number</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" id="city" name="city" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-textarea" rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interest" class="form-label">Preferred Class/Product</label>
+                    <select id="interest" name="interest" class="form-select">
+                        <option value="">Select your interest</option>
+                        <option value="bridal-makeup">Bridal Makeup Classes</option>
+                        <option value="eye-art">Eye Art Classes</option>
+                        <option value="brush-control">Brush Control Classes</option>
+                        <option value="color-theory">Color Theory Classes</option>
+                        <option value="cosmetics">Cosmetics Products</option>
+                        <option value="supplements">Supplements</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    Send on WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#classes">Classes</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#returns">Returns Policy</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/asfarizwanofficial" class="social-link">📘</a>
+                        <a href="https://instagram.com/asfarizwanofficial" class="social-link">📷</a>
+                        <a href="https://youtube.com/@asfarizwanofficial" class="social-link">📹</a>
+                        <a href="https://tiktok.com/@asfarizwanofficial" class="social-link">🎵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Stay updated with our latest products and classes</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+                        <button type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Asfa Rizwan Beauty & Wellness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart -->
+    <button class="cart-btn" onclick="toggleCart()" aria-label="Shopping cart">
+        🛒
+        <span class="cart-count" id="cart-count">0</span>
+    </button>
+
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3 class="cart-title">Shopping Cart</h3>
+            <button class="cart-close" onclick="closeCart()" aria-label="Close cart">×</button>
+        </div>
+        <div class="cart-content" id="cart-content">
+            <div class="empty-cart">
+                <p>Your cart is empty</p>
+                <a href="#shop" class="btn btn-primary" onclick="closeCart()">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total" id="cart-total">Total: PKR 0</div>
+            <button class="btn btn-primary" style="width: 100%;" onclick="checkout()">
+                Checkout via WhatsApp
+            </button>
+            <textarea id="checkout-fallback" style="width: 100%; margin-top: 1rem; padding: 0.5rem; border-radius: 5px; border: 1px solid #ddd; resize: vertical;" rows="4" placeholder="Order summary will appear here for copying..." readonly></textarea>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/+923045443486" class="whatsapp-btn" aria-label="Contact via WhatsApp">
+        💬
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">×</button>
+            <h3 id="lightbox-title">Class Details</h3>
+            <p id="lightbox-description">Get detailed information about this masterclass and secure your seat.</p>
+            <button class="btn btn-primary" onclick="requestSeat()">Request Seat</button>
+        </div>
+    </div>
+
+    <script>
+// Global variables
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let products = [];
+let currentFilter = 'all';
+
+// Product data
+const productData = [
+    // Cosmetics
+    {
+        id: 1,
+        category: 'cosmetics',
+        name: 'Royal Glow Highlighter',
+        blurb: 'Luxurious highlighter for that perfect glow',
+        price: 3200,
+        rating: 5,
+        image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=300&h=200&fit=crop'
+    },
+    {
+        id: 2,
+        category: 'cosmetics',
+        name: 'Koh-e-Noor Kajal',
+        blurb: 'Traditional kajal for mesmerizing eyes',
+        price: 1200,
+        rating: 4,
+        image: 'https://images.unsplash.com/photo-1631214540675-c7a8f8c63c81?w=300&h=200&fit=crop'
+    },
+    // Makeup
+    {
+        id: 3,
+        category: 'makeup',
+        name: 'Lahore Luxe Lipstick Set (5-in-1)',
+        blurb: 'Complete lipstick collection for every occasion',
+        price: 5800,
+        rating: 5,
+        image: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=300&h=200&fit=crop'
+    },
+    {
+        id: 4,
+        category: 'makeup',
+        name: 'Punjab Peach Blush',
+        blurb: 'Natural peachy blush for rosy cheeks',
+        price: 2400,
+        rating: 4,
+        image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=300&h=200&fit=crop'
+    },
+    // Base
+    {
+        id: 5,
+        category: 'base',
+        name: 'Silk-Veil Foundation SPF 25',
+        blurb: 'Full coverage foundation with sun protection',
+        price: 4500,
+        rating: 5,
+        image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=300&h=200&fit=crop'
+    },
+    {
+        id: 6,
+        category: 'base',
+        name: 'Prime Perfect Pore-Refiner',
+        blurb: 'Smooths skin texture for flawless makeup',
+        price: 2900,
+        rating: 4,
+        image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=300&h=200&fit=crop'
+    },
+    // Brushes
+    {
+        id: 7,
+        category: 'brushes',
+        name: 'AR Pro Brush Kit (12 pcs)',
+        blurb: 'Professional makeup brushes set',
+        price: 6500,
+        rating: 5,
+        image: 'https://images.unsplash.com/photo-1583241475880-0317a2118295?w=300&h=200&fit=crop'
+    },
+    {
+        id: 8,
+        category: 'brushes',
+        name: 'Contour & Glow Duo',
+        blurb: 'Specialized brushes for contouring',
+        price: 2200,
+        rating: 4,
+        image: 'https://images.unsplash.com/photo-1515688594390-b649af70d282?w=300&h=200&fit=crop'
+    },
+    // Hair Color
+    {
+        id: 9,
+        category: 'haircolor',
+        name: 'Midnight Mehndi Black',
+        blurb: 'Rich black hair color with natural ingredients',
+        price: 1800,
+        rating: 4,
+        image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=300&h=200&fit=crop'
+    },
+    {
+        id: 10,
+        category: 'haircolor',
+        name: 'Saffron Brown 5.3',
+        blurb: 'Warm brown shade with golden undertones',
+        price: 1950,
+        rating: 4,
+        image: 'https://images.unsplash.com/photo-1560869713-7d0954657922?w=300&h=200&fit=crop'
+    },
+    // Serums
+    {
+        id: 11,
+        category: 'serums',
+        name: 'Rose Quartz Vitamin-C Serum',
+        blurb: 'Brightening serum for radiant skin',
+        price: 3900,
+        rating: 5,
+        image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300&h=200&fit=crop'
+    },
+    {
+        id: 12,
+        category: 'serums',
+        name: 'Argan Repair Hair Serum',
+        blurb: 'Nourishing serum for damaged hair',
+        price: 2700,
+        rating: 4,
+        image: 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=300&h=200&fit=crop'
+    },
+    // Supplements
+    {
+        id: 13,
+        category: 'supplements',
+        name: 'Monohydrate Creatine 300g',
+        blurb: 'Pure creatine for performance enhancement',
+        price: 5200,
+        rating: 5,
+        image: 'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=300&h=200&fit=crop'
+    },
+    {
+        id: 14,
+        category: 'supplements',
+        name: 'Creatine Micronized 250g',
+        blurb: 'Micronized creatine for better absorption',
+        price: 4600,
+        rating: 4,
+        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop'
+    },
+    {
+        id: 15,
+        category: 'supplements',
+        name: 'BCAA Beauty Boost',
+        blurb: 'Amino acids for muscle and beauty support',
+        price: 3400,
+        rating: 4,
+        image: 'https://images.unsplash.com/photo-1544966503-7cc5ac882d5c?w=300&h=200&fit=crop'
+    }
+];
+
+// Utility functions
+function formatPKR(amount) {
+    return new Intl.NumberFormat('en-PK', {
+        style: 'currency',
+        currency: 'PKR'
+    }).format(amount);
+}
+
+function generateStars(rating) {
+    return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+}
+
+function encodeOrderToWhatsApp(cart, customer) {
+    let message = `New Order from ${customer.name || 'Customer'}\n\n`;
+    
+    cart.forEach(item => {
+        message += `${item.name} x${item.quantity} - ${formatPKR(item.price * item.quantity)}\n`;
+    });
+    
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    message += `\nTotal: ${formatPKR(total)}\n`;
+    
+    if (customer.phone) message += `Phone: ${customer.phone}\n`;
+    if (customer.city) message += `City: ${customer.city}\n`;
+    if (customer.address) message += `Address: ${customer.address}\n`;
+    
+    return encodeURIComponent(message);
+}
+
+// Initialize the website
+document.addEventListener('DOMContentLoaded', function() {
+    products = productData;
+    updateCurrentYear();
+    loadProducts();
+    updateCartUI();
+    initIntersectionObserver();
+    initSmoothScrolling();
+    initBackToTop();
+    
+    // Load cart from localStorage
+    updateCartCount();
+});
+
+function updateCurrentYear() {
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+}
+
+// Product functions
+function loadProducts() {
+    const grid = document.getElementById('products-grid');
+    grid.innerHTML = '';
+    
+    const filteredProducts = currentFilter === 'all' 
+        ? products 
+        : products.filter(product => product.category === currentFilter);
+    
+    filteredProducts.forEach(product => {
+        const productCard = createProductCard(product);
+        grid.appendChild(productCard);
+    });
+}
+
+function createProductCard(product) {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.setAttribute('data-category', product.category);
+    
+    card.innerHTML = `
+        <div class="product-image" style="background-image: url('${product.image}')">
+            <div class="product-badge">New</div>
+        </div>
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-blurb">${product.blurb}</p>
+        <div class="product-price">${formatPKR(product.price)}</div>
+        <div class="product-rating">
+            ${generateStars(product.rating)}
+        </div>
+        <button class="btn btn-primary" onclick="addToCart(${product.id})" style="width: 100%;">
+            Add to Cart
+        </button>
+    `;
+    
+    return card;
+}
+
+// Filter functions
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('filter-btn')) {
+        // Remove active class from all filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Add active class to clicked button
+        e.target.classList.add('active');
+        
+        // Update current filter
+        currentFilter = e.target.getAttribute('data-filter');
+        
+        // Reload products
+        loadProducts();
+    }
+});
+
+// Cart functions
+function addToCart(productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+    
+    const existingItem = cart.find(item => item.id === productId);
+    
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            ...product,
+            quantity: 1
+        });
+    }
+    
+    saveCart();
+    updateCartUI();
+    updateCartCount();
+    
+    // Show feedback
+    showNotification('Item added to cart!');
+}
+
+function removeFromCart(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    saveCart();
+    updateCartUI();
+    updateCartCount();
+}
+
+function updateQuantity(productId, change) {
+    const item = cart.find(item => item.id === productId);
+    if (!item) return;
+    
+    item.quantity += change;
+    
+    if (item.quantity <= 0) {
+        removeFromCart(productId);
+    } else {
+        saveCart();
+        updateCartUI();
+        updateCartCount();
+    }
+}
+
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function updateCartCount() {
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartCountEl = document.getElementById('cart-count');
+    cartCountEl.textContent = count;
+    cartCountEl.style.display = count > 0 ? 'flex' : 'none';
+}
+
+function updateCartUI() {
+    const cartContent = document.getElementById('cart-content');
+    const cartTotal = document.getElementById('cart-total');
+    
+    if (cart.length === 0) {
+        cartContent.innerHTML = `
+            <div class="empty-cart">
+                <p>Your cart is empty</p>
+                <a href="#shop" class="btn btn-primary" onclick="closeCart()">Start Shopping</a>
+            </div>
+        `;
+        cartTotal.textContent = 'Total: PKR 0';
+        return;
+    }
+    
+    let html = '';
+    let total = 0;
+    
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        
+        html += `
+            <div class="cart-item">
+                <div class="cart-item-image" style="background-image: url('${item.image}')"></div>
+                <div class="cart-item-details">
+                    <div class="cart-item-name">${item.name}</div>
+                    <div class="cart-item-price">${formatPKR(itemTotal)}</div>
+                    <div class="quantity-controls">
+                        <button class="qty-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button class="qty-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                        <button class="qty-btn" onclick="removeFromCart(${item.id})" style="margin-left: auto; background: #e74c3c; color: white;">×</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    
+    cartContent.innerHTML = html;
+    cartTotal.textContent = `Total: ${formatPKR(total)}`;
+}
+
+function toggleCart() {
+    const drawer = document.getElementById('cart-drawer');
+    const overlay = document.getElementById('cart-overlay');
+    
+    drawer.classList.toggle('open');
+    overlay.classList.toggle('active');
+}
+
+function closeCart() {
+    const drawer = document.getElementById('cart-drawer');
+    const overlay = document.getElementById('cart-overlay');
+    
+    drawer.classList.remove('open');
+    overlay.classList.remove('active');
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+    
+    const customer = {
+        name: 'Customer',
+        phone: '',
+        address: 'To be confirmed'
+    };
+    
+    const orderSummary = encodeOrderToWhatsApp(cart, customer);
+    const whatsappUrl = `https://wa.me/+923045443486?text=${orderSummary}`;
+    
+    // Update fallback textarea
+    const fallbackText = decodeURIComponent(orderSummary);
+    document.getElementById('checkout-fallback').value = fallbackText;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+}
+
+// Video controls
+function toggleVideo() {
+    const video = document.querySelector('.hero-video');
+    const button = document.querySelector('.video-toggle');
+    
+    if (video.muted) {
+        video.muted = false;
+        button.textContent = '🔊';
+    } else {
+        video.muted = true;
+        button.textContent = '🔇';
+    }
+}
+
+// Offer banner
+function closeOffer() {
+    const banner = document.getElementById('offer-banner');
+    banner.style.display = 'none';
+}
+
+// Lightbox functions
+function openLightbox(classTitle) {
+    const lightbox = document.getElementById('lightbox');
+    const title = document.getElementById('lightbox-title');
+    const description = document.getElementById('lightbox-description');
+    
+    title.textContent = classTitle;
+    description.textContent = `Learn more about ${classTitle} and secure your spot in this popular masterclass. Contact us for detailed information about schedules, requirements, and booking.`;
+    
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function requestSeat() {
+    closeLightbox();
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Contact form
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    
+    // Validate required fields
+    if (!validateForm(data)) {
+        return;
+    }
+    
+    // Compose WhatsApp message
+    let message = `Contact Form Submission\n\n`;
+    message += `Name: ${data.name}\n`;
+    message += `Phone: ${data.phone}\n`;
+    if (data.city) message += `City: ${data.city}\n`;
+    if (data.interest) message += `Interest: ${data.interest}\n`;
+    if (data.message) message += `Message: ${data.message}\n`;
+    
+    const whatsappUrl = `https://wa.me/+923045443486?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+    
+    // Reset form
+    this.reset();
+    showNotification('Message sent via WhatsApp!');
+});
+
+function validateForm(data) {
+    let isValid = true;
+    
+    // Validate name
+    const nameError = document.getElementById('name-error');
+    if (!data.name || data.name.trim().length < 2) {
+        nameError.classList.add('visible');
+        isValid = false;
+    } else {
+        nameError.classList.remove('visible');
+    }
+    
+    // Validate phone
+    const phoneError = document.getElementById('phone-error');
+    if (!data.phone || data.phone.trim().length < 10) {
+        phoneError.classList.add('visible');
+        isValid = false;
+    } else {
+        phoneError.classList.remove('visible');
+    }
+    
+    return isValid;
+}
+
+// Smooth scrolling for navigation links
+function initSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Close mobile menu if open
+                closeMobileMenu();
+                
+                // Close cart if open
+                closeCart();
+            }
+        });
+    });
+}
+
+// Mobile menu
+function closeMobileMenu() {
+    // Implementation would go here for mobile menu
+    // Currently using CSS-only approach
+}
+
+// Back to top button
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Intersection Observer for animations
+function initIntersectionObserver() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    document.querySelectorAll('.section').forEach(section => {
+        observer.observe(section);
+    });
+}
+
+// Notification system
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: var(--gradient);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        z-index: 9999;
+        font-weight: 600;
+        animation: slideIn 0.3s ease;
+    `;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 3000);
+}
+
+// Add keyframe animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+    }
+`;
+document.head.appendChild(style);
+
+// Handle keyboard navigation
+document.addEventListener('keydown', function(e) {
+    // Close cart with Escape key
+    if (e.key === 'Escape') {
+        closeCart();
+        closeLightbox();
+    }
+    
+    // Handle Enter key for buttons
+    if (e.key === 'Enter' && e.target.classList.contains('btn')) {
+        e.target.click();
+    }
+});
+
+// Handle window resize
+window.addEventListener('resize', function() {
+    // Close mobile menu on resize to desktop
+    if (window.innerWidth > 768) {
+        closeMobileMenu();
+    }
+});
+
+// Handle page visibility change
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        // Pause videos when tab is not visible
+        document.querySelectorAll('video').forEach(video => {
+            video.pause();
+        });
+    } else {
+        // Resume videos when tab is visible
+        document.querySelectorAll('video[autoplay]').forEach(video => {
+            video.play();
+        });
+    }
+});
+
+// Error handling for videos
+document.querySelectorAll('video').forEach(video => {
+    video.addEventListener('error', function() {
+        console.log('Video failed to load, showing fallback');
+        this.style.display = 'none';
+    });
+});
+
+// Lazy loading for images (fallback)
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            }
+        });
+    });
+    
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
+// Service Worker registration (for PWA capabilities)
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful');
+        }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
+
+// Analytics event tracking (placeholder)
+function trackEvent(category, action, label) {
+    // Google Analytics or other analytics tracking would go here
+    console.log(`Event tracked: ${category} - ${action} - ${label}`);
+}
+
+// Track button clicks
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('btn-primary')) {
+        trackEvent('Button', 'Click', e.target.textContent.trim());
+    }
+});
+
+// Performance monitoring
+window.addEventListener('load', function() {
+    // Log page load performance
+    setTimeout(function() {
+        const perfData = performance.timing;
+        const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+        console.log(`Page load time: ${pageLoadTime}ms`);
+    }, 0);
+});
+
+// Accessibility enhancements
+
+
+// Add skip link for accessibility
+
+
+// Initialize everything when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Asfa Rizwan Beauty & Wellness website loaded successfully!');
+    });
+} else {
+    console.log('Asfa Rizwan Beauty & Wellness website loaded successfully!');
+}
+    </script>
+</body>
+</html>
